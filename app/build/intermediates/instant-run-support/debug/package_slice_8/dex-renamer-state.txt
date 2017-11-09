@@ -1,0 +1,4 @@
+#Wed Nov 08 22:24:23 CET 2017
+base.0=/Users/alicantipi/AndroidStudioProjects/ScoreKeeper/app/build/intermediates/transforms/dexMerger/debug/8
+renamed.0=classes.dex
+file.0=/Users/alicantipi/AndroidStudioProjects/ScoreKeeper/app/build/intermediates/transforms/dexMerger/debug/8/classes.dex
