@@ -1,231 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="com.example.android.scorekeeper.MainActivity"
-    android:orientation="vertical"
-    >
-
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/scoresLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        tools:context="com.example.android.scorekeeper.MainActivity">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/scoresLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_marginLeft="20dp"
-                android:text="Team A"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:id="@+id/linear_layout_team_a_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <include layout="@layout/layout_team_score"/>
 
-                    <TextView
-                        android:id="@+id/scoreTextText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Score"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/scoreTextA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="-10dp"
-                        android:text="0"
-                        android:textSize="50sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/faultsTextText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Faults"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/faultsTextA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="-10dp"
-                        android:text="0"
-                        android:textSize="50sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
             </LinearLayout>
 
-            <Button
-                android:id="@+id/scorePlus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="30dp"
-                android:onClick="scoreA"
-                android:text="Score"
-                android:textSize="16dp"
-                 />
-
-
-            <Button
-                android:id="@+id/faultA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="20dp"
-                android:onClick="faultA"
-                android:text="Fault"
-                android:textSize="16dp"
-                 />
-        </LinearLayout>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="280dp"
-            android:background="@android:color/black"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="40dp"
-            />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_marginLeft="20dp"
-                android:text="Team B"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="280dp"
+                android:background="@android:color/black"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:id="@+id/linear_layout_team_b_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <include layout="@layout/layout_team_score"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Score"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/scoreTextB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="-10dp"
-                        android:text="0"
-                        android:textSize="50sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Faults"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/faultsTextB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="-10dp"
-                        android:text="0"
-                        android:textSize="50sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
             </LinearLayout>
-
-            <Button
-                android:id="@+id/scorePlusB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="30dp"
-                android:onClick="scoreB"
-                android:text="Score"
-                android:textSize="16dp"
-                 />
-
-
-            <Button
-                android:id="@+id/faultB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="20dp"
-                android:onClick="faultB"
-                android:text="Fault"
-                android:textSize="16dp"
-                 />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/resetAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="resetAll"
+            android:text="reset"
+            android:textSize="18sp"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/resetAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:onClick="resetAll"
-        android:text="reset"
-        android:textSize="18dp"
-        android:layout_below="@id/scoresLayout"
-        android:layout_centerInParent="true"
-        />
-</RelativeLayout>
+</ScrollView>
