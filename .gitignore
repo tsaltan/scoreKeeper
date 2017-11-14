@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+# Android Studio
+.idea/
+*.iml
+
+# Mac File Store
+.DS_Store
+
+# Generated Files
+build/
+config/
+
+# Gradle Files
+.gradle/
+
+# Properties Files
+local.properties
